@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 16px;
+        font-family: "Red Hat Display", sans-serif;
+        color: #666666;
+      }
+      .wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: hsl(225, 100%, 94%);
+      }
+      .container {
+        margin: 2rem 1rem;
+        background-color: white;
+        border-radius: 1rem;
+        text-align: center;
+      }
+      .container-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 1.2rem;
+      }
+
+      .container-img {
+        width: 100%;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+      .title {
+        font-size: 1.8rem;
+      }
+      .title,
+      .annual-title {
+        color: hsl(223, 47%, 23%);
+      }
+      .description {
+        margin: 0rem 1.3rem 0.5rem 1.3rem;
+      }
+      .annual {
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1rem;
+        background-color: #f3f3f3;
+      }
+      .annual-left {
+        display: flex;
+        margin-right: auto;
+        gap: 1rem;
+      }
+      .payment {
+        background-color: rgb(56, 41, 224);
+        padding: 1rem;
+        border-radius: 0.8rem;
+        border: none;
+        color: white;
+        font-weight: 700;
+        font-size: 1rem;
+        box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.5);
+      }
+      .cancel {
+        font-weight: 700;
+        font-size: 1rem;
+        background: none;
+        border: none;
+        color: #666666;
+      }
+      .annual-change,
+      .cancel,
+      .payment {
+        cursor: pointer;
+      }
+      .annual-change:hover {
+        text-decoration: none;
+        color: rgba(56, 41, 224, 0.7);
+      }
+      .payment:hover {
+        background: linear-gradient(
+          rgba(56, 41, 224, 0.7),
+          rgba(56, 41, 224, 0.7)
+        );
+      }
+      .cancel:hover {
+        color: black;
+      }
+      @media only screen and (min-width: 375px) {
+        .wrapper {
+          background: hsl(225, 100%, 94%);
+        }
+      }
+      @media only screen and (min-width: 1280px) {
+        .wrapper {
+          background: url("images/pattern-background-desktop.svg") no-repeat,
+            rgb(224, 232, 255);
+        }
+        .container {
+          max-width: 25vw;
+        }
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="container">
+        <img
+          src="images/illustration-hero.svg"
+          alt="My Happy SVG"
+          class="container-img"
+        />
+        <div class="container-body">
+          <h1 class="title">Order Summary</h1>
+          <p class="description">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+          <div class="annual">
+            <div class="annual-left">
+              <img src="images/icon-music.svg" alt="icon music" />
+              <div class="annual-title-price">
+                <strong class="annual-title">Annual Plan</strong>
+                <p class="annual-price">$59.99/year</p>
+              </div>
+            </div>
+            <div class="annual-right">
+              <a href="#" class="annual-change">Change </a>
+            </div>
+          </div>
+          <button class="payment">Proceed to Payment</button>
+          <button class="cancel">Cancel Order</button>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Minh Le</a>.
+      </div>
+    </main>
+  </body>
+</html>
